@@ -43,6 +43,7 @@ module GrapeTokenAuth
       def prepare_html
         part = ::Mail::Part.new
         part.body = message.html_body
+        part.content_type = "text/html"
         part
       end
 
